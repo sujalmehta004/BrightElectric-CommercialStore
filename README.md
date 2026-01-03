@@ -1,73 +1,113 @@
-# React + TypeScript + Vite
+# Electronics Shop Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, comprehensive Point of Sale (POS) and Inventory Management System designed specifically for electronics retail and repair shops. Built with **React 19**, **TypeScript**, and **Vite**, this application offers a high-performance, responsive interface for managing all aspects of your business.
 
-Currently, two official plugins are available:
+![Project Status](https://img.shields.io/badge/Status-Active-success) ![License](https://img.shields.io/badge/License-MIT-blue)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+### 🛒 Point of Sale (POS) & Billing
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Fast Checkout**: Streamlined billing interface for quick transactions.
+- **Discount Management**: Apply custom discounts to items or totals.
+- **Tax Calculation**: Automated tax handling.
+- **Invoice Generation**: Professional invoice creation and history.
+- **Loyalty System**: Track customer visits and award loyalty points on purchases.
 
-## Expanding the ESLint configuration
+### 📦 Inventory & Stock Management
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Real-time Tracking**: Monitor stock levels across all products.
+- **Low Stock Alerts**: Visual indicators for items running low.
+- **Product Organization**: Categorize products with ease.
+- **Buying & Selling Prices**: Clear visibility on margins.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🔧 Repair Management
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Service Tracking**: Manage repair jobs from intake to completion.
+- **Status Updates**: Track repair progress (Pending, In Progress, Completed).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 👥 Customer & Supplier Management
+
+- **Customer CRM**: Detailed customer profiles with purchase history.
+- **Supplier Database**: Manage supplier contact details and supply history.
+
+### 📊 Dashboard & Analytics
+
+- **Financial Overview**: Visual charts for revenue, expenses, and profit.
+- **Reports**: Detailed reports for data-driven decision making.
+- **Accounting**: Basic financial tracking and ledger.
+
+## 🛠️ Tech Stack
+
+This project uses the latest modern web technologies for performance and scalability:
+
+- **Frontend Framework**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
+- **Routing**: [React Router v7](https://reactrouter.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Charts**: [Recharts](https://recharts.org/)
+- **Utilities**: `date-fns`, `uuid`, `clsx`
+
+## 🏁 Getting Started
+
+Follow these steps to set up the project locally.
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/yourusername/electronics-shop-management.git
+   cd electronics-shop-management
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server** This command concurrently starts the Vite frontend and the mock JSON server backend.
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Access the application** Open your browser and navigate to `http://localhost:5173`.
+
+## 📜 Scripts
+
+- `npm run dev`: Starts both the frontend and the mock backend server.
+- `npm run build`: Type-checks and builds the project for production.
+- `npm run lint`: Runs ESLint to check for code quality issues.
+- `npm run db`: Starts the JSON server independently (mock database).
+
+## 📂 Project Structure
+
+```
+src/
+├── components/   # Reusable UI components
+├── pages/        # Main application pages (Billing, Inventory, etc.)
+├── stores/       # Global state management (Zustand stores)
+├── layouts/      # Layout wrappers
+├── types/        # TypeScript type definitions
+├── utils/        # Helper functions
+├── data/         # Mock data (db.json)
+└── App.tsx       # Main application entry
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🤝 Contributing
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
