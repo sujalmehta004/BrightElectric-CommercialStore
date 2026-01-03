@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { ChevronDown } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { useState, useRef, useEffect } from 'react'; // Added missing React imports
 
 interface MenuItem {
   label: string;

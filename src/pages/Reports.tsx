@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useSales } from '../stores/useSales';
 import { useSuppliers } from '../stores/useSuppliers';
 import { formatCurrency, cn } from '../utils';
@@ -6,7 +6,7 @@ import { format, subDays, isSameMonth, isSameYear, isSameDay, startOfDay, endOfD
 import { 
   BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, Legend 
 } from 'recharts';
-import { Download, TrendingUp, DollarSign, ShoppingBag, Eye, Printer, Calendar, Users, Wallet, AlertCircle } from 'lucide-react';
+import { Download, TrendingUp, DollarSign, Users, Wallet } from 'lucide-react';
 import { Modal } from '../components/Modal';
 
 type DateRangeType = 'TODAY' | 'WEEK' | 'MONTH' | 'YEAR' | 'CUSTOM';
@@ -18,7 +18,7 @@ const Reports = () => {
   const [dateRange, setDateRange] = useState<DateRangeType>('WEEK');
   const [customStart, setCustomStart] = useState('');
   const [customEnd, setCustomEnd] = useState('');
-  const [selectedSale, setSelectedSale] = useState<any>(null);
+
 
   // Filter Sales
   const filteredSales = useMemo(() => {
@@ -275,7 +275,7 @@ const Reports = () => {
                                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                                ))}
                            </Pie>
-                           <RechartsTooltip formatter={(val: number) => formatCurrency(val)} />
+                           <RechartsTooltip formatter={(val: any) => formatCurrency(val)} />
                            <Legend />
                        </PieChart>
                    </ResponsiveContainer>

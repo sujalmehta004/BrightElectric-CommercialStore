@@ -52,7 +52,7 @@ const Invoices = () => {
     const payment = {
       id: uuidv4(),
       amount: selectedInvoice.dueAmount,
-      method: 'CASH',
+      method: 'CASH' as const,
       date: new Date().toISOString(),
       note: 'Full Settlement'
     };

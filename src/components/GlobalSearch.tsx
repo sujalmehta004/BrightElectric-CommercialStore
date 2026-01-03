@@ -48,7 +48,8 @@ export const GlobalSearch = ({ onClose }: { onClose?: () => void }) => {
       { label: 'Go to Accounting', path: '/accounting', type: 'NAV', icon: ArrowRight },
       { label: 'Go to Reports', path: '/reports', type: 'NAV', icon: ArrowRight },
       { label: 'Settings', path: '/settings', type: 'NAV', icon: Settings },
-    ].filter(n => n.label.toLowerCase().includes(lowerQuery));
+    ].filter(n => n.label.toLowerCase().includes(lowerQuery))
+     .map(n => ({ ...n, sub: '', id: n.path })); // Normalize shape
 
     return [...matchedProducts, ...matchedCustomers, ...matchedSales, ...nav];
   }, [query, products, customers, sales]);

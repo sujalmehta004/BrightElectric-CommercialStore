@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Search, ShoppingCart, Plus, Minus, Trash2, CheckCircle, CreditCard, Banknote, Smartphone, ArrowRight, User, Printer, ImageIcon } from 'lucide-react';
 import { useInventory } from '../stores/useInventory';
 import { useCart } from '../stores/useCart';
@@ -116,20 +116,6 @@ const Billing = () => {
     setShowSuccessModal(true);
   };
 
-  const handleAfterSaleOption = (action: 'PRINT' | 'NEW') => {
-      if (action === 'PRINT' && lastSale) {
-          // Trigger Print logic - we need to import handlePrint or logic from Invoices
-          // Re-using the A4 logic would be best. 
-          // For now, let's just trigger a basic print or redirect to invoices
-          // Ideally, we lift the print logic to a hook or utility.
-          // Since I can't easily move the specific A4 logic right now without a refactor,
-          // I will emulate it or open the invoice in a new window.
-          
-          window.open(`/invoices?print=${lastSale.id}`, '_blank'); // Hacky but works if we handle it
-          // OR, even better, I'll quickly duplicate the print logic here or make a helper.
-          // Let's use a helper in next step. For now, just close.
-      }
-      setShowSuccessModal(false);
       setLastSale(null);
   };
 

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useAuth } from '../stores/useAuth';
 import type { User } from '../stores/useAuth';
-import { UserPlus, Shield, Trash2, Key, CheckCircle, XCircle, Search, UserCircle, Briefcase } from 'lucide-react';
+import { UserPlus, Shield, Trash2, Key, CheckCircle, XCircle, Search, Briefcase } from 'lucide-react';
 import { Modal } from '../components/Modal';
 import { v4 as uuidv4 } from 'uuid';
 import { cn } from '../utils';
 
 const UsersPage = () => {
-  const { users, addUser, deleteUser, updateUserPermissions, user: currentUser } = useAuth();
+  const { users, addUser, deleteUser, updateUserPermissions } = useAuth();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   

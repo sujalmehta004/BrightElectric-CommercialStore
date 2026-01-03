@@ -181,9 +181,9 @@ export const useSuppliers = create<SupplierState>((set) => ({
     } catch (error) { console.error(error); }
   },
 
-  receiveOrder: async (id, receivedAt) => {
+    receiveOrder: async (id, receivedAt) => {
     try {
-      const updates = { isReceived: true, receivedAt, status: 'RECEIVED' };
+      const updates = { isReceived: true, receivedAt, status: 'RECEIVED' as const };
       const response = await fetch(`${API_BASE}/purchaseOrders/${id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },

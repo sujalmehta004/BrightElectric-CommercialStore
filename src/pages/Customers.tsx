@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Search, Trash2, User, Phone, Mail, Edit2, MapPin, ShoppingBag, Wrench, Calendar, ArrowRight, X, Clock, IndianRupee, FileText, ExternalLink, Receipt, Package, ClipboardList, TrendingUp, UserCircle, PhoneIncoming, AtSign, BarChart3, Target, Zap, ShieldCheck, Activity, Award } from 'lucide-react';
+import { Plus, Search, Trash2, User, Phone, Mail, Edit2, Wrench, Calendar, TrendingUp, UserCircle, PhoneIncoming, AtSign, ShieldCheck, Activity, Award, Save } from 'lucide-react';
 import { useCustomers } from '../stores/useCustomers';
 import { useSales } from '../stores/useSales';
 import { useRepairs } from '../stores/useRepairs';

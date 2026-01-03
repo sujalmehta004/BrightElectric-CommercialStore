@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { Plus, Search, Trash2, Truck, Phone, FileText, X, Package, User, MapPin, ArrowRight, Download, IndianRupee, History, RefreshCcw, CheckCircle2, AlertCircle, TrendingUp, CreditCard, Receipt, Wallet, Banknote, Clock, ExternalLink, Printer, Edit2 } from 'lucide-react';
+import { useState } from 'react';
+import { Plus, Search, Trash2, Truck, X, Package, Download, IndianRupee, History, RefreshCcw, Edit2 } from 'lucide-react';
 import { useInventory } from '../stores/useInventory';
 import { useSuppliers, type Supplier, type PurchaseOrder, type SupplierTransaction } from '../stores/useSuppliers';
 import { useShopSettings } from '../stores/useShopSettings';
@@ -435,14 +435,14 @@ const Suppliers = () => {
                     { id: 'restock', icon: RefreshCcw, label: 'Restock' },
                     { id: 'new_order', icon: Plus, label: 'New Stock' },
                     { id: 'arrivals', icon: Truck, label: 'Arrivals' },
-                    { id: 'ledger', icon: History, label: 'Ledger' }
+                     { id: 'ledger', icon: History, label: 'Ledger' }
                   ].map(tab => (
                     <button key={tab.id} onClick={() => setActiveTab(tab.id as any)}
                         className={cn("flex items-center gap-2 px-6 py-2.5 rounded-xl font-black text-[10px] uppercase tracking-widest transition-all whitespace-nowrap", 
                         activeTab === tab.id ? "bg-white text-slate-900 shadow-sm" : "text-slate-400 hover:text-slate-600")}>
                         <tab.icon className="w-4 h-4" />
                         {tab.label}
-                        {tab.id === 'arrivals' && purchaseOrders.filter(po => po.supplierId === selectedSupplier.id && !po.isReceived).length > 0 && (
+                        {tab.id === 'arrivals' && selectedSupplier && purchaseOrders.filter(po => po.supplierId === selectedSupplier.id && !po.isReceived).length > 0 && (
                            <span className="bg-blue-600 text-white w-4 h-4 rounded-full flex items-center justify-center text-[8px] animate-pulse">
                               {purchaseOrders.filter(po => po.supplierId === selectedSupplier.id && !po.isReceived).length}
                            </span>

@@ -1,24 +1,10 @@
 import React from 'react';
 import { Download, Upload, Trash2, Database, AlertTriangle } from 'lucide-react';
-import { useInventory } from '../stores/useInventory';
-import { useSales } from '../stores/useSales';
-import { useCustomers } from '../stores/useCustomers';
-
-import { useSuppliers } from '../stores/useSuppliers';
-import { useExpenses } from '../stores/useExpenses';
-import { useRepairs } from '../stores/useRepairs';
 import { useShopSettings } from '../stores/useShopSettings';
 import { Building2 } from 'lucide-react';
 import { useGlobalModal } from '../components/GlobalModal';
 
 const Settings = () => {
-  const { products } = useInventory();
-  const { sales } = useSales();
-  const { customers } = useCustomers();
-  const { suppliers, purchaseOrders } = useSuppliers();
-  const { expenses } = useExpenses();
-  const { jobs: repairs } = useRepairs(); // Alias jobs to repairs match existing logic
-
   const { details, updateDetails } = useShopSettings(); // Add hook
   const { showAlert, showConfirm } = useGlobalModal();
 

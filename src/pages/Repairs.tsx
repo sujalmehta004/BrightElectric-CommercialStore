@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Search, Wrench, Clock, CheckCircle, AlertCircle, Phone, FileText, User, UserPlus, ArrowRight, UserCircle, Edit2, Trash2, X, AlertTriangle, Save, Check } from 'lucide-react';
+import { Plus, Search, Wrench, Clock, CheckCircle, AlertCircle, User, UserPlus, ArrowRight, UserCircle, Edit2, Trash2, AlertTriangle, Save, Check } from 'lucide-react';
 import { useRepairs } from '../stores/useRepairs';
 import { useCustomers } from '../stores/useCustomers';
 import { Modal } from '../components/Modal';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Search, Trash2, Edit2, Filter, Download, UserPlus, X, AlertCircle, CheckCircle2, PackageSearch, Image, ImageIcon, FileText } from 'lucide-react';
+import { Plus, Search, Trash2, Edit2, UserPlus, X, PackageSearch, ImageIcon } from 'lucide-react';
 import { useInventory } from '../stores/useInventory';
 import { useSuppliers } from '../stores/useSuppliers';
 import { Modal } from '../components/Modal';
@@ -9,7 +9,7 @@ import type { Product } from '../types';
 import { formatCurrency, cn } from '../utils';
 
 const Inventory = () => {
-  const { products, addProduct, updateProduct, handleStockArrival, deleteProduct } = useInventory();
+  const { products, addProduct, updateProduct, deleteProduct } = useInventory();
   const { showConfirm } = useGlobalModal();
   const { suppliers, addSupplier } = useSuppliers();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -46,7 +46,7 @@ const Inventory = () => {
   const [filterDate, setFilterDate] = useState('');
 
   const categories = Array.from(new Set(products.map(p => p.category))).filter(Boolean);
-  const brands = Array.from(new Set(products.map(p => p.brand))).filter(Boolean);
+
 
   const filteredProducts = products.filter(p => {
     const matchesSearch = p.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
