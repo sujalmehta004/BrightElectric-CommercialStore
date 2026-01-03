@@ -2,12 +2,12 @@
 
 A modern, comprehensive Point of Sale (POS) and Inventory Management System designed specifically for electronics retail and repair shops. Built with **React 19**, **TypeScript**, and **Vite**, this application offers a high-performance, responsive interface for managing all aspects of your business.
 
-![Project Status](https://img.shields.io/badge/Status-Active-success) ![License](https://img.shields.io/badge/License-MIT-blue)
+![Project Status](https://img.shields.io/badge/Status-Active-success)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
 ## 🚀 Features
 
 ### 🛒 Point of Sale (POS) & Billing
-
 - **Fast Checkout**: Streamlined billing interface for quick transactions.
 - **Discount Management**: Apply custom discounts to items or totals.
 - **Tax Calculation**: Automated tax handling.
@@ -15,24 +15,20 @@ A modern, comprehensive Point of Sale (POS) and Inventory Management System desi
 - **Loyalty System**: Track customer visits and award loyalty points on purchases.
 
 ### 📦 Inventory & Stock Management
-
 - **Real-time Tracking**: Monitor stock levels across all products.
 - **Low Stock Alerts**: Visual indicators for items running low.
 - **Product Organization**: Categorize products with ease.
 - **Buying & Selling Prices**: Clear visibility on margins.
 
 ### 🔧 Repair Management
-
 - **Service Tracking**: Manage repair jobs from intake to completion.
 - **Status Updates**: Track repair progress (Pending, In Progress, Completed).
 
 ### 👥 Customer & Supplier Management
-
 - **Customer CRM**: Detailed customer profiles with purchase history.
 - **Supplier Database**: Manage supplier contact details and supply history.
 
 ### 📊 Dashboard & Analytics
-
 - **Financial Overview**: Visual charts for revenue, expenses, and profit.
 - **Reports**: Detailed reports for data-driven decision making.
 - **Accounting**: Basic financial tracking and ledger.
@@ -56,32 +52,30 @@ This project uses the latest modern web technologies for performance and scalabi
 Follow these steps to set up the project locally.
 
 ### Prerequisites
-
 - Node.js (v18 or higher)
 - npm or yarn
 
 ### Installation
 
 1. **Clone the repository**
-
    ```bash
    git clone https://github.com/yourusername/electronics-shop-management.git
    cd electronics-shop-management
    ```
 
 2. **Install dependencies**
-
    ```bash
    npm install
    ```
 
-3. **Start the development server** This command concurrently starts the Vite frontend and the mock JSON server backend.
-
+3. **Start the development server**
+   This command concurrently starts the Vite frontend and the mock JSON server backend.
    ```bash
    npm run dev
    ```
 
-4. **Access the application** Open your browser and navigate to `http://localhost:5173`.
+4. **Access the application**
+   Open your browser and navigate to `http://localhost:5173`.
 
 ## 📜 Scripts
 

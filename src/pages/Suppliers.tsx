@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Plus, Search, Trash2, Truck, X, Package, Download, IndianRupee, History, RefreshCcw, Edit2 } from 'lucide-react';
+import { Plus, Search, Trash2, Truck, X, Package, Download, IndianRupee, History, RefreshCcw, Edit2, ArrowRight, Clock, CheckCircle2, Receipt, FileText, Printer, TrendingUp } from 'lucide-react';
 import { useInventory } from '../stores/useInventory';
-import { useSuppliers, type Supplier, type PurchaseOrder, type SupplierTransaction } from '../stores/useSuppliers';
+import { useSuppliers, type Supplier, type PurchaseOrder } from '../stores/useSuppliers';
 import { useShopSettings } from '../stores/useShopSettings';
 import { Modal } from '../components/Modal';
 import { useGlobalModal } from '../components/GlobalModal';
@@ -26,7 +26,7 @@ const Suppliers = () => {
     name: '', contactPerson: '', phone: '', address: '', VATIn: '', category: '', paymentTerms: 'Immediate'
   });
 
-  const [isRestocking, setIsRestocking] = useState(false);
+
   const [restockData, setRestockData] = useState({ billNumber: '', date: new Date().toISOString().split('T')[0], paidAmount: 0 });
   const [restockItems, setRestockItems] = useState<{ productId: string, name: string, quantity: number, buyPrice: number }[]>([]);
   const [productSearch, setProductSearch] = useState('');
@@ -146,7 +146,7 @@ const Suppliers = () => {
         }
     });
 
-    setIsRestocking(false);
+
     setRestockItems([]);
     setRestockData({ billNumber: '', date: new Date().toISOString().split('T')[0], paidAmount: 0 });
     setActiveTab('arrivals');
@@ -1128,7 +1128,7 @@ const Suppliers = () => {
                   <div className="space-y-3">
                      <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest ml-1">Payment History Timeline</p>
                      <div className="space-y-2 max-h-40 overflow-y-auto pr-2 custom-scrollbar">
-                        {viewingBill.payments.map((p, i) => (
+                        {viewingBill.payments.map((p) => (
                            <div key={p.id} className="flex justify-between items-center bg-slate-50 p-3 rounded-xl border border-slate-100">
                               <div className="flex items-center gap-3">
                                  <div className="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-600">
@@ -1203,10 +1203,10 @@ const Suppliers = () => {
                            <div class="info-grid">
                               <div class="info-box">
                                  <h3>SUPPLIER IDENTITY</h3>
-                                 <p style="font-size: 18px; color: #0f172a;">${selectedSupplier.name}</p>
-                                 <p>${selectedSupplier.address}</p>
-                                 <p>VATIN: ${selectedSupplier.VATIn || 'N/A'}</p>
-                                 <p>CONTACT: ${selectedSupplier.phone}</p>
+                                 <p style="font-size: 18px; color: #0f172a;">${selectedSupplier?.name || 'N/A'}</p>
+                                 <p>${selectedSupplier?.address || ''}</p>
+                                 <p>VATIN: ${selectedSupplier?.VATIn || 'N/A'}</p>
+                                 <p>CONTACT: ${selectedSupplier?.phone || 'N/A'}</p>
                               </div>
                               <div class="info-box" style="text-align: right;">
                                  <h3>MANIFEST SUMMARY</h3>

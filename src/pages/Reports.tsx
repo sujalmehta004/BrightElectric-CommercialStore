@@ -7,7 +7,7 @@ import {
   BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, Legend 
 } from 'recharts';
 import { Download, TrendingUp, DollarSign, Users, Wallet } from 'lucide-react';
-import { Modal } from '../components/Modal';
+
 
 type DateRangeType = 'TODAY' | 'WEEK' | 'MONTH' | 'YEAR' | 'CUSTOM';
 
@@ -271,7 +271,7 @@ const Reports = () => {
                                paddingAngle={5}
                                dataKey="value"
                            >
-                               {pieChartData.map((entry, index) => (
+                               {pieChartData.map((_, index) => (
                                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                                ))}
                            </Pie>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { LayoutDashboard, ShoppingCart, Package, FileBarChart, Users, Settings } from 'lucide-react';
 import { cn } from '../utils';

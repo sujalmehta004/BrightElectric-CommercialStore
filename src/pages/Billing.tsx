@@ -18,7 +18,7 @@ const Billing = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [customerSearch, setCustomerSearch] = useState('');
   const [selectedCustomer, setSelectedCustomer] = useState<Customer | null>(null);
-  const [showSuccess, setShowSuccess] = useState(false);
+
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [lastSale, setLastSale] = useState<any>(null); // Use Sale type
   const [showAddCustomer, setShowAddCustomer] = useState(false);
@@ -116,8 +116,6 @@ const Billing = () => {
     setShowSuccessModal(true);
   };
 
-      setLastSale(null);
-  };
 
   return (
     <div className="flex flex-col lg:flex-row gap-4 h-[calc(100vh-5rem)]">
@@ -410,17 +408,17 @@ const Billing = () => {
               <span className="font-bold text-2xl text-blue-600">{formatCurrency(Math.max(0, cartTotal - (Number(discountAmount) || 0)))}</span>
            </div>
 
-           <button
-             onClick={handleCheckout}
-             disabled={items.length === 0}
-             className={cn(
-               "w-full py-3 rounded-lg font-bold text-white flex items-center justify-center gap-2 shadow-lg transition-transform active:scale-[0.98]",
-               showSuccess ? "bg-green-500 shadow-green-500/20" : "bg-slate-900 hover:bg-slate-800 shadow-slate-900/20"
-             )}
-           >
-             {showSuccess ? <CheckCircle className="w-5 h-5"/> : <ArrowRight className="w-5 h-5"/>}
-             {showSuccess ? "Order Completed!" : `Print Invoice (F1)`}
-           </button>
+            <button
+              onClick={handleCheckout}
+              disabled={items.length === 0}
+              className={cn(
+                "w-full py-3 rounded-lg font-bold text-white flex items-center justify-center gap-2 shadow-lg transition-transform active:scale-[0.98]",
+                showSuccessModal ? "bg-green-500 shadow-green-500/20" : "bg-slate-900 hover:bg-slate-800 shadow-slate-900/20"
+              )}
+            >
+              {showSuccessModal ? <CheckCircle className="w-5 h-5"/> : <ArrowRight className="w-5 h-5"/>}
+              {showSuccessModal ? "Order Completed!" : `Print Invoice (F1)`}
+            </button>
         </div>
       </div>
 

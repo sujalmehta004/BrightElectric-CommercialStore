@@ -1,0 +1,43 @@
+
+> electronics-shop@0.0.0 build
+> tsc -b && vite build
+
+src/components/ErrorBoundary.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/Modal.tsx(1,17): error TS6133: 'Fragment' is declared but its value is never read.
+src/components/StatCard.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/layouts/DashboardLayout.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/layouts/DesktopLayout.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/pages/Billing.tsx(21,23): error TS6133: 'setShowSuccess' is declared but its value is never read.
+src/pages/Customers.tsx(9,25): error TS6196: 'Sale' is declared but never used.
+src/pages/Customers.tsx(9,31): error TS6196: 'RepairJob' is declared but never used.
+src/pages/Customers.tsx(354,23): error TS2304: Cannot find name 'IndianRupee'.
+src/pages/Dashboard.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/pages/Dashboard.tsx(3,3): error TS6133: 'DollarSign' is declared but its value is never read.
+src/pages/Dashboard.tsx(3,15): error TS6133: 'Package' is declared but its value is never read.
+src/pages/Dashboard.tsx(4,10): error TS6133: 'ChevronRight' is declared but its value is never read.
+src/pages/Dashboard.tsx(4,24): error TS6133: 'FileText' is declared but its value is never read.
+src/pages/Dashboard.tsx(4,87): error TS6133: 'X' is declared but its value is never read.
+src/pages/Dashboard.tsx(439,56): error TS6133: 'idx' is declared but its value is never read.
+src/pages/Invoices.tsx(3,1): error TS6133: 'useSuppliers' is declared but its value is never read.
+src/pages/Invoices.tsx(7,53): error TS6133: 'PlusCircle' is declared but its value is never read.
+src/pages/Invoices.tsx(13,18): error TS6133: 'updateSale' is declared but its value is never read.
+src/pages/Reports.tsx(10,1): error TS6133: 'Modal' is declared but its value is never read.
+src/pages/Reports.tsx(274,51): error TS6133: 'entry' is declared but its value is never read.
+src/pages/Suppliers.tsx(4,64): error TS6133: 'SupplierTransaction' is declared but its value is never read.
+src/pages/Suppliers.tsx(29,10): error TS6133: 'isRestocking' is declared but its value is never read.
+src/pages/Suppliers.tsx(385,27): error TS2304: Cannot find name 'ArrowRight'.
+src/pages/Suppliers.tsx(807,50): error TS2552: Cannot find name 'Clock'. Did you mean 'Lock'?
+src/pages/Suppliers.tsx(817,47): error TS2304: Cannot find name 'CheckCircle2'.
+src/pages/Suppliers.tsx(874,40): error TS2304: Cannot find name 'Receipt'.
+src/pages/Suppliers.tsx(937,54): error TS2304: Cannot find name 'FileText'.
+src/pages/Suppliers.tsx(950,99): error TS2304: Cannot find name 'Clock'.
+src/pages/Suppliers.tsx(952,99): error TS2304: Cannot find name 'Printer'.
+src/pages/Suppliers.tsx(993,37): error TS2304: Cannot find name 'Receipt'.
+src/pages/Suppliers.tsx(1059,37): error TS2304: Cannot find name 'TrendingUp'.
+src/pages/Suppliers.tsx(1131,55): error TS6133: 'i' is declared but its value is never read.
+src/pages/Suppliers.tsx(1135,38): error TS2304: Cannot find name 'CheckCircle2'.
+src/pages/Suppliers.tsx(1206,80): error TS18047: 'selectedSupplier' is possibly 'null'.
+src/pages/Suppliers.tsx(1207,39): error TS18047: 'selectedSupplier' is possibly 'null'.
+src/pages/Suppliers.tsx(1208,46): error TS18047: 'selectedSupplier' is possibly 'null'.
+src/pages/Suppliers.tsx(1209,48): error TS18047: 'selectedSupplier' is possibly 'null'.
+src/pages/Suppliers.tsx(1292,23): error TS2552: Cannot find name 'Printer'. Did you mean 'print'?

@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { useSales } from '../stores/useSales';
-import { useSuppliers } from '../stores/useSuppliers'; // Import hook
 import { useCustomers } from '../stores/useCustomers'; // Import hook
 import type { Sale } from '../types';
 import { formatCurrency, cn } from '../utils';
-import { Search, Printer, Eye, CreditCard, History, PlusCircle, CheckCircle } from 'lucide-react';
+import { Search, Printer, Eye, CreditCard, History, CheckCircle } from 'lucide-react';
 import { v4 as uuidv4 } from 'uuid';
 import { Modal } from '../components/Modal';
 import { useShopSettings } from '../stores/useShopSettings';
 
 const Invoices = () => {
-  const { sales, updateSale } = useSales();
+  const { sales } = useSales();
   const [searchTerm, setSearchTerm] = useState('');
   const [filter, setFilter] = useState<'ALL' | 'DUE' | 'PAID'>('ALL');
   const { customers } = useCustomers();

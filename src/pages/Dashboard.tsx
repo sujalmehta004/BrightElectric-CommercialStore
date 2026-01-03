@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { 
-  DollarSign, Package, ShoppingBag, TrendingUp, Calendar, 
-  Clock, ChevronRight, FileText, Printer, Download, ArrowUpRight, History, Settings2, X
+  ShoppingBag, TrendingUp, Calendar, 
+  Clock, Printer, Download, ArrowUpRight, History, Settings2
 } from 'lucide-react';
 import { useInventory } from '../stores/useInventory';
 import { useSales } from '../stores/useSales';
@@ -436,7 +436,7 @@ const Dashboard = () => {
                    </h4>
                    <div className="space-y-2">
                       {selectedSale.payments && selectedSale.payments.length > 0 ? (
-                         selectedSale.payments.map((p, idx) => (
+                         selectedSale.payments.map((p) => (
                             <div key={p.id} className="flex justify-between items-center p-2 bg-white rounded-lg border border-slate-200/50 shadow-sm">
                                <div>
                                   <p className="text-[10px] font-bold text-slate-700">{formatCurrency(p.amount)}</p>

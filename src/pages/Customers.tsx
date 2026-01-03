@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Plus, Search, Trash2, User, Phone, Mail, Edit2, Wrench, Calendar, TrendingUp, UserCircle, PhoneIncoming, AtSign, ShieldCheck, Activity, Award, Save } from 'lucide-react';
+import { Plus, Search, Trash2, User, Phone, Mail, Edit2, Wrench, Calendar, TrendingUp, UserCircle, PhoneIncoming, AtSign, ShieldCheck, Activity, Award, Save, IndianRupee } from 'lucide-react';
 import { useCustomers } from '../stores/useCustomers';
 import { useSales } from '../stores/useSales';
 import { useRepairs } from '../stores/useRepairs';
 import { Modal } from '../components/Modal';
 import { useGlobalModal } from '../components/GlobalModal';
 import { v4 as uuidv4 } from 'uuid';
-import type { Customer, Sale, RepairJob } from '../types';
+import type { Customer } from '../types';
 import { formatCurrency, cn } from '../utils';
 
 const Customers = () => {
